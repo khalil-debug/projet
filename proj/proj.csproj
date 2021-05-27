@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E129B0B-33DE-48D3-B58C-A407720440E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>proj</RootNamespace>
+    <AssemblyName>proj</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\admin home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\admin home.Designer.cs">
+      <DependentUpon>admin home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Caisse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Caisse.Designer.cs">
+      <DependentUpon>Caisse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\fournisseurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\fournisseurs.Designer.cs">
+      <DependentUpon>fournisseurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Jouets admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Jouets admin.Designer.cs">
+      <DependentUpon>Jouets admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Identification user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Identification user.Designer.cs">
+      <DependentUpon>Identification user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caissier\Caissier_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caissier\Caissier_home.Designer.cs">
+      <DependentUpon>Caissier_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caissier\ConsulterVentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caissier\ConsulterVentes.Designer.cs">
+      <DependentUpon>ConsulterVentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caissier\VendreJouet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caissier\VendreJouet.Designer.cs">
+      <DependentUpon>VendreJouet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\admin home.resx">
+      <DependentUpon>admin home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Caisse.resx">
+      <DependentUpon>Caisse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\fournisseurs.resx">
+      <DependentUpon>fournisseurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Identification user.resx">
+      <DependentUpon>Identification user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Jouets admin.resx">
+      <DependentUpon>Jouets admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caissier\Caissier_home.resx">
+      <DependentUpon>Caissier_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caissier\ConsulterVentes.resx">
+      <DependentUpon>ConsulterVentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caissier\VendreJouet.resx">
+      <DependentUpon>VendreJouet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier-machine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
